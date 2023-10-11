@@ -1,0 +1,53 @@
+// header {
+.banner {
+  height: 62.5vh;
+  @media screen and (max-width :767px) {
+    height: 19.5rem;
+  }
+  .slideBanner {
+    height: 62.5vh;
+    @media screen and (max-width :767px) {
+      height: 19.5rem;
+    }
+    img {
+      height: 100%;
+    }
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  
+}
+// }
+.feature_banner {
+  // width: 81.25rem;
+  height: 14rem;
+  flex-shrink: 0;
+  border-radius: 0.875rem;
+  background: linear-gradient(180deg, #0572af 0%, #128ace 100%);
+  position: relative;
+  transform: translateY(-35%);
+  z-index: 1;
+  padding-left: 2.25rem;
+  flex-direction: column;
+  @media screen and (max-width:767px) {
+    width:22.1875rem;
+    height: 29.75rem;
+    transform: translateY(-10%);
+    border-radius: 0.5rem;
+  }
+}
+.feature_container {
+  padding-right: 2.25rem;
+}
+.feature_item {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  .feature_num {
+    justify-content: space-between;
+  }
+}
