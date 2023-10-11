@@ -1,0 +1,52 @@
+// header {
+.banner {
+  height: calc((100vh - 6.125rem));
+  .slideBanner {
+    height: 34.5rem;
+    img {
+      height: 100%;
+    }
+    .titleBanner {
+      color: #fff;
+      text-align: center;
+      font-family: Averta Std CY;
+      font-size: 3.75rem;
+      font-weight: 800;
+      letter-spacing: -0.1875rem;
+      z-index: 10;
+      position: relative;
+    }
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .feature_banner {
+    width: 81.25rem;
+    height: 14rem;
+    flex-shrink: 0;
+    border-radius: 0.875rem;
+    background: linear-gradient(180deg, #0572af 0%, #128ace 100%);
+    position: relative;
+    top: -8rem;
+    z-index: 1;
+    margin: 0 auto;
+    padding-left: 2.25rem;
+    flex-direction: column;
+  }
+  .feature_container {
+    gap: 5.19rem;
+    padding-right: 2.25rem;
+  }
+  .feature_item {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.5rem;
+    .feature_num {
+      justify-content: space-between;
+    }
+  }
+}
+// }
