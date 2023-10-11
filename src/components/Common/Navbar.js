@@ -6,6 +6,8 @@ import flag from '@/assets/images/logoVN.png'
 import MenuCategory from '@/components/Menu/Category'
 import MenuMonile from '../Menu/MenuMobile/MenuMonile'
 import { AiOutlineMenu } from 'react-icons/ai'
+import img1 from '@/assets/images/img1.jpg'
+import img2 from '@/assets/images/img2.png'
 
 function Navbar() {
   const refMb = useRef()
@@ -23,9 +25,65 @@ function Navbar() {
     nav4: 'Tin Tức-Sự Kiện',
     nav5: 'Hợp tác và Liên Kết'
   }
+  const dataCate = [
+    {
+      title: 'Ủng Công nghiệp',
+      image: img1,
+      info: {
+        info_title: 'Ủng CN',
+        desc: 'Sử dụng trong môi trường nước, sình lầy hoặc trơn trượt Làm từ nhựa PVC tổng hợp, thích hợp dùng đi mưa, trong nông nghiệp',
+        subDesc: 'Xem chi tiết'
+      }
+    },
+    {
+      title: 'Ủng Nông nghiệp',
+      image: img2,
+      info: {
+        info_title: 'Ủng NN',
+        desc: 'Sử dụng trong môi trường nước, sình lầy hoặc trơn trượt Làm từ nhựa PVC tổng hợp, thích hợp dùng đi mưa, trong nông nghiệp',
+        subDesc: 'Xem chi tiết'
+      }
+    },
+    {
+      title: 'Ủng Thông dụng',
+      image: img1,
+      info: {
+        info_title: 'Ủng NN',
+        desc: 'Sử dụng trong môi trường nước, sình lầy hoặc trơn trượt Làm từ nhựa PVC tổng hợp, thích hợp dùng đi mưa, trong nông nghiệp',
+        subDesc: 'Xem chi tiết'
+      }
+    },
+    {
+      title: 'Ủng Nông nghiệp',
+      image: img2,
+      info: {
+        info_title: 'Ủng NN',
+        desc: 'Sử dụng trong môi trường nước, sình lầy hoặc trơn trượt Làm từ nhựa PVC tổng hợp, thích hợp dùng đi mưa, trong nông nghiệp',
+        subDesc: 'Xem chi tiết'
+      }
+    },
+    {
+      title: 'Ủng Thông dụng',
+      image: img1,
+      info: {
+        info_title: 'Ủng NN',
+        desc: 'Sử dụng trong môi trường nước, sình lầy hoặc trơn trượt Làm từ nhựa PVC tổng hợp, thích hợp dùng đi mưa, trong nông nghiệp',
+        subDesc: 'Xem chi tiết'
+      }
+    },
+    {
+      title: 'Quần áo bảo hộ',
+      image: img2,
+      info: {
+        info_title: 'Ủng NN',
+        desc: 'Sử dụng trong môi trường nước, sình lầy hoặc trơn trượt Làm từ nhựa PVC tổng hợp, thích hợp dùng đi mưa, trong nông nghiệp',
+        subDesc: 'Xem chi tiết'
+      }
+    }
+  ]
   return (
     <div className='nav-container md:h-[6.125rem] h-[4rem]'>
-      <nav className='flex md:px-[3.75rem] items-center max-md:justify-between '>
+      <nav className='flex md:px-[3.75rem] items-center justify-between '>
         <div className='flex md:pr-[3.75rem] h-full logoMb max-md:border-solid max-md:border-r-[0.03125rem] max-md:border-[#DCE1E9]'>
           <Image
             src={logo}
@@ -37,22 +95,22 @@ function Navbar() {
         <div className='items-center max-md:hidden flex gap-[5.94vw] h-full md:border-r-[0.0625rem] border-solid md:border-l-[0.0625rem] border-[#DCE1E9]'>
           <div className='flex md:gap-[3vw] h-full md:pl-[3.25rem] items-center'>
             <div className='text-textPrimary flex items-center cursor-pointer h-full font-mark md:text-[0.875rem] leading-[1.5] tracking-[0.02625rem] uppercase'>
-              <span>{listNav?.nav1}</span>
+              <span className='whitespace-nowrap'>{listNav?.nav1}</span>
             </div>
             <div className='text-textPrimary flex items-center cursor-pointer h-full font-mark md:text-[0.875rem] leading-[1.5] tracking-[0.02625rem] uppercase'>
-              <span>{listNav?.nav2}</span>
+              <span className='whitespace-nowrap'>{listNav?.nav2}</span>
             </div>
             <div className='text-textPrimary flex items-center cursor-pointer h-full nav-link font-mark md:text-[0.875rem] leading-[1.5] tracking-[0.02625rem] uppercase'>
-              <span>{listNav?.nav3}</span>
+              <span className='whitespace-nowrap'>{listNav?.nav3}</span>
               <div className='menu-item'>
-                <MenuCategory />
+                <MenuCategory dataCate={dataCate} />
               </div>
             </div>
             <div className='text-textPrimary flex items-center cursor-pointer h-full font-mark md:text-[0.875rem] leading-[1.5] tracking-[0.02625rem] uppercase'>
-              <span>{listNav?.nav4}</span>
+              <span className='whitespace-nowrap'>{listNav?.nav4}</span>
             </div>
             <div className='text-textPrimary flex items-center cursor-pointer h-full font-mark md:text-[0.875rem] leading-[1.5] tracking-[0.02625rem] uppercase'>
-              <span>{listNav?.nav5}</span>
+              <span className='whitespace-nowrap'>{listNav?.nav5}</span>
             </div>
           </div>
           <div className='md:pr-[2.12rem]'>
@@ -84,8 +142,8 @@ function Navbar() {
               fill='#213D55'
             />
           </svg>
-          <div className='flex md:gap-[0.56rem] h-full items-center'>
-            <div className='flex items-center max-md:gap-[0.38rem] h-full max-md:border-solid max-md:px-[0.59rem] max-md:border-r-[0.03125rem] max-md:border-l-[0.03125rem] max-md:border-[#DCE1E9]'>
+          <div className='flex h-full items-center'>
+            <div className='flex items-center gap-[0.56rem] max-md:gap-[0.38rem] h-full max-md:border-solid max-md:px-[0.59rem] max-md:border-r-[0.03125rem] max-md:border-l-[0.03125rem] max-md:border-[#DCE1E9]'>
               <Image
                 src={flag}
                 alt='flag'
@@ -97,20 +155,20 @@ function Navbar() {
               </span>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                className='md:w-[0.5rem] md:h-[0.25rem]'
+                className='md:w-[0.5rem] md:h-[0.25rem] w-[0.40975rem] h-[0.20488rem]'
                 viewBox='0 0 10 7'
                 fill='none'
               >
                 <path d='M1 1L5 5L9 1' stroke='#213D55' stroke-width='2' />
               </svg>
-              <svg
+              {/* <svg
                 xmlns='http://www.w3.org/2000/svg'
-                className='w-[0.40975rem] h-[0.20488rem]'
+                className=''
                 viewBox='0 0 8 5'
                 fill='none'
               >
                 <path d='M1 0.361084L4.27778 3.63886L7.55556 0.361084' stroke='#213D55' />
-              </svg>
+              </svg> */}
             </div>
             <div ref={refBar} className='md:hidden px-[1.25rem]' onClick={handleClickBar}>
               <AiOutlineMenu />
@@ -118,8 +176,8 @@ function Navbar() {
           </div>
         </div>
       </nav>
-      <div className='fixed inset-0 menu-mobile' ref={refMb}>
-        <MenuMonile handleCloseMenuMb={handleClose} />
+      <div className='fixed inset-0 menu-mobile z-10' ref={refMb}>
+        <MenuMonile dataCate={dataCate} listNav={listNav}  handleCloseMenuMb={handleClose} />
       </div>
     </div>
   )

@@ -1,69 +1,13 @@
 'use client'
 import React, { useState } from 'react'
-import img1 from '@/assets/images/img1.jpg'
-import img2 from '@/assets/images/img2.png'
+
 import Image from 'next/image'
-function index() {
+function index({dataCate}) {
   const [active, setActive] = useState(1)
   const handleClick = (index) => {
     setActive(index)
   }
-  const dataCate = [
-    {
-      title: 'Ủng Công nghiệp',
-      image: img1,
-      info: {
-        info_title: 'Ủng CN',
-        desc: 'Sử dụng trong môi trường nước, sình lầy hoặc trơn trượt Làm từ nhựa PVC tổng hợp, thích hợp dùng đi mưa, trong nông nghiệp',
-        subDesc: 'Xem chi tiết'
-      }
-    },
-    {
-      title: 'Ủng Nông nghiệp',
-      image: img2,
-      info: {
-        info_title: 'Ủng NN',
-        desc: 'Sử dụng trong môi trường nước, sình lầy hoặc trơn trượt Làm từ nhựa PVC tổng hợp, thích hợp dùng đi mưa, trong nông nghiệp',
-        subDesc: 'Xem chi tiết'
-      }
-    },
-    {
-      title: 'Ủng Thông dụng',
-      image: img1,
-      info: {
-        info_title: 'Ủng NN',
-        desc: 'Sử dụng trong môi trường nước, sình lầy hoặc trơn trượt Làm từ nhựa PVC tổng hợp, thích hợp dùng đi mưa, trong nông nghiệp',
-        subDesc: 'Xem chi tiết'
-      }
-    },
-    {
-      title: 'Ủng Nông nghiệp',
-      image: img2,
-      info: {
-        info_title: 'Ủng NN',
-        desc: 'Sử dụng trong môi trường nước, sình lầy hoặc trơn trượt Làm từ nhựa PVC tổng hợp, thích hợp dùng đi mưa, trong nông nghiệp',
-        subDesc: 'Xem chi tiết'
-      }
-    },
-    {
-      title: 'Ủng Thông dụng',
-      image: img1,
-      info: {
-        info_title: 'Ủng NN',
-        desc: 'Sử dụng trong môi trường nước, sình lầy hoặc trơn trượt Làm từ nhựa PVC tổng hợp, thích hợp dùng đi mưa, trong nông nghiệp',
-        subDesc: 'Xem chi tiết'
-      }
-    },
-    {
-      title: 'Quần áo bảo hộ',
-      image: img2,
-      info: {
-        info_title: 'Ủng NN',
-        desc: 'Sử dụng trong môi trường nước, sình lầy hoặc trơn trượt Làm từ nhựa PVC tổng hợp, thích hợp dùng đi mưa, trong nông nghiệp',
-        subDesc: 'Xem chi tiết'
-      }
-    }
-  ]
+ 
   return (
     <div className='h-full flex'>
       <div className='col-1 flex flex-col md:w-[21.5rem] md:mr-[5.25rem]'>

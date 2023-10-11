@@ -17,7 +17,7 @@ nav {
     background: url(../../assets/images/bgMegaMenu.png);
     background-position: center;
     background-repeat: no-repeat;
-    padding: 6.81vw 12.5vw 10.56vw;
+    padding: 6.81rem 12.5rem 10.56rem;
     top: 6.125rem;
     opacity: 0;
     visibility: hidden;
@@ -36,4 +36,10 @@ nav {
   @media screen and (max-width: 767px) {
     padding: 0.5rem 0.5rem 0.5rem 0.62rem;
   }
+}
+
+.menu_mobile-item{
+  transition: all 0.3s linear;
+  height: 0;
+  overflow: hidden;
 }
