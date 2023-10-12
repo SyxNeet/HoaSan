@@ -94,23 +94,23 @@ function Navbar() {
         </div>
         <div className='items-center max-md:hidden flex gap-[5.94vw] h-full md:border-r-[0.0625rem] border-solid md:border-l-[0.0625rem] border-[#DCE1E9]'>
           <div className='flex md:gap-[3vw] h-full md:pl-[3.25rem] items-center'>
-            <div className='text-textPrimary flex items-center cursor-pointer h-full font-mark md:text-[0.875rem] leading-[1.5] tracking-[0.02625rem] uppercase'>
-              <span className='whitespace-nowrap'>{listNav?.nav1}</span>
+            <div className='text-textPrimary flex items-center cursor-pointer h-full font-mark md:text-[0.875rem] leading-[1.5] tracking-[0.02625rem] '>
+              <span className='whitespace-nowrap uppercase'>{listNav?.nav1}</span>
             </div>
-            <div className='text-textPrimary flex items-center cursor-pointer h-full font-mark md:text-[0.875rem] leading-[1.5] tracking-[0.02625rem] uppercase'>
-              <span className='whitespace-nowrap'>{listNav?.nav2}</span>
+            <div className='text-textPrimary flex items-center cursor-pointer h-full font-mark md:text-[0.875rem] leading-[1.5] tracking-[0.02625rem] '>
+              <span className='whitespace-nowrap uppercase'>{listNav?.nav2}</span>
             </div>
-            <div className='text-textPrimary flex items-center cursor-pointer h-full nav-link font-mark md:text-[0.875rem] leading-[1.5] tracking-[0.02625rem] uppercase'>
-              <span className='whitespace-nowrap'>{listNav?.nav3}</span>
+            <div className='text-textPrimary flex items-center cursor-pointer h-full nav-link font-mark md:text-[0.875rem] leading-[1.5] tracking-[0.02625rem] '>
+              <span className='whitespace-nowrap uppercase'>{listNav?.nav3}</span>
               <div className='menu-item'>
                 <MenuCategory dataCate={dataCate} />
               </div>
             </div>
-            <div className='text-textPrimary flex items-center cursor-pointer h-full font-mark md:text-[0.875rem] leading-[1.5] tracking-[0.02625rem] uppercase'>
-              <span className='whitespace-nowrap'>{listNav?.nav4}</span>
+            <div className='text-textPrimary flex items-center cursor-pointer h-full font-mark md:text-[0.875rem] leading-[1.5] tracking-[0.02625rem] '>
+              <span className='whitespace-nowrap uppercase'>{listNav?.nav4}</span>
             </div>
-            <div className='text-textPrimary flex items-center cursor-pointer h-full font-mark md:text-[0.875rem] leading-[1.5] tracking-[0.02625rem] uppercase'>
-              <span className='whitespace-nowrap'>{listNav?.nav5}</span>
+            <div className='text-textPrimary flex items-center cursor-pointer h-full font-mark md:text-[0.875rem] leading-[1.5] tracking-[0.02625rem] '>
+              <span className='whitespace-nowrap uppercase'>{listNav?.nav5}</span>
             </div>
           </div>
           <div className='md:pr-[2.12rem]'>

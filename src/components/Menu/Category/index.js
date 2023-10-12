@@ -9,11 +9,11 @@ function index({dataCate}) {
   }
  
   return (
-    <div className='h-full flex'>
+    <div className='h-full flex items-center'>
       <div className='col-1 flex flex-col md:w-[21.5rem] md:mr-[5.25rem]'>
         {dataCate?.map((item, index) => (
           <span
-            className={`text-[#fff] md:text-[1.75rem] leading-[1.2] ${index === active ? 'font-[700]' : 'font-[400]'}`}
+            className={`text-[#fff] py-[1.69rem] border-solid border-b-[0.0625rem] border-[#fff] border-opacity-10 md:text-[1.75rem] whitespace-nowrap font-sans leading-[1.2] ${index === active ? 'font-[700]' : 'font-[400]'}`}
             key={index}
             onClick={() => handleClick(index)}
           >
@@ -34,7 +34,7 @@ function index({dataCate}) {
             />
           ))}
         </div>
-        <div className='col-3 flex flex-col'>
+        <div className='col-3 flex flex-col w-[34rem]'>
           {dataCate?.map((data, index) => (
             <div key={index} className={`flex-col ${index === active ? 'flex' : 'hidden'}`}>
               <h3 className='md:text-[2.4375rem] font-[700] leading-[1.2] text-[#fff] md:mb-[1.5rem]'>
