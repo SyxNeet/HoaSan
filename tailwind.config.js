@@ -16,11 +16,13 @@ module.exports = {
       textPrimary: '#213D55',
       textSecondary: '#0774B2',
       subTextColor: '#006198',
-      textButtonColor: '#0086C7'
+      textButtonColor: '#0086C7',
+      customColor: 'rgba(33, 61, 85, 0.49)',
     },
     fontFamily: {
-      sans: ['Averta Std CY', 'Arial', 'sans-serif'],
-      mark: ['Mark Pro']
+      sans: ['Helvetica', 'Arial', 'sans-serif'],
+      mark: ['Mark Pro'],
+      averta:['Averta Std CY']
     }
   },
   plugins: []

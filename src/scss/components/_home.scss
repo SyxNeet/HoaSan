@@ -24,7 +24,7 @@
 // }
 .feature_banner {
   // width: 81.25rem;
-  height: 14rem;
+  // height: 14rem;
   flex-shrink: 0;
   border-radius: 0.875rem;
   background: linear-gradient(180deg, #0572af 0%, #128ace 100%);
@@ -34,7 +34,7 @@
   padding-left: 2.25rem;
   flex-direction: column;
   @media screen and (max-width:767px) {
-    width:22.1875rem;
+    // width:22.1875rem;
     height: 29.75rem;
     transform: translateY(-10%);
     border-radius: 0.5rem;
@@ -49,5 +49,19 @@
   padding-top: 1.5rem;
   .feature_num {
     justify-content: space-between;
+  }
+}
+
+.scrollBanner{
+  position: relative;
+  animation: animate 0.7s infinite alternate ;
+}
+
+@keyframes animate {
+  0%{
+    bottom: 0;
+  }
+  100% {
+    bottom: 10px;
   }
 }
