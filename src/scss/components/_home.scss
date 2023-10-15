@@ -23,8 +23,6 @@
 }
 // }
 .feature_banner {
-  // width: 81.25rem;
-  // height: 14rem;
   flex-shrink: 0;
   border-radius: 0.875rem;
   background: linear-gradient(180deg, #0572af 0%, #128ace 100%);
@@ -33,8 +31,12 @@
   z-index: 1;
   padding-left: 2.25rem;
   flex-direction: column;
+  .textSlide{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FFFFFF24;
+    -webkit-text-fill-color: transparent;
+  }
   @media screen and (max-width:767px) {
-    // width:22.1875rem;
     height: 29.75rem;
     transform: translateY(-10%);
     border-radius: 0.5rem;
@@ -63,5 +65,132 @@
   }
   100% {
     bottom: 10px;
+  }
+}
+
+.swiper_product{
+  padding-left: 9.36rem !important;
+  @media screen and (max-width :767px) {
+    padding-left: 0.62rem !important;
+  }
+  .swiper-slide{
+    padding-right: 1rem;
+    @media screen and (max-width :767px) {
+      padding-right: 0.62rem;
+    }
+  }
+  .item-news{
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: #ffff;
+      opacity: 0;
+      transition: all 0.3s linear;
+      transform: translateY(-100%);
+      z-index: 0;
+    }
+    &:hover::after{
+      transform: translateY(0%);
+      opacity: 1;
+    }
+    &:hover .text-news{
+      color: #213D55;
+    }
+    &:hover{
+      border: 1px solid #ccc;
+    }
+  }
+  .item-swiper{
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('../../assets/images/img_hover.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: all 0.3s linear;
+      transform: translateY(-100%);
+      z-index: 0;
+    }
+    &:hover::after{
+      transform: translateY(0%);
+      opacity: 1;
+    }
+    &:hover > img {
+      opacity: 0;
+    }
+  }
+ 
+}
+
+.partner {
+  .rfm-marquee-container{
+    overflow:unset;
+  }
+  .rfm-initial-child-container{
+    gap: 1rem;
+  }
+}
+
+.maquee{
+  .maquee-animate{
+    animation: maquee_image 12s linear infinite ;
+  }
+  .maquee-animate2{
+    animation: maquee_image_reverse 12s linear infinite ;
+
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    height: 10vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+    background: linear-gradient(0deg, #05659a00 0%, #03649b 100%);
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    height: 10vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+   background: linear-gradient(180deg, #05659a00 0%, #036398 100%);
+  }
+}
+
+.text-customize{
+  background: linear-gradient(180deg, #0572AF 0%, #128ACE 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes maquee_image {
+  0%{
+    transform: translateY(0);
+  }
+
+  100%{
+    transform: translateY(calc(-100% - 20px));
+  }
+}
+@keyframes maquee_image_reverse {
+  0%{
+    transform: translateY(calc(-100% - 20px));
+  }
+
+  100%{
+    transform: translateY(0);
   }
 }
