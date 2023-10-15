@@ -1,0 +1,23 @@
+.footer {
+    background: linear-gradient(180deg, #0572AF 0%, #128ACE 100%);
+    .input{
+        border-radius: 0.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.46);
+        height: 3.3125rem;
+        width: 17.125rem;
+        background: transparent;
+        &::placeholder{
+            padding-left: 1rem;
+            color: rgba(255, 255, 255, 0.64);
+            font-family: Averta Std CY;
+            font-size: 0.875rem;
+            line-height: 150%; 
+        }
+    }
+}
+
+.menu_footer_mb{
+    transition: all 0.3s linear;
+    height: 0;
+    overflow: hidden;
+}

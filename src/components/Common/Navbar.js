@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import logo from '@/assets/images/logoHeader.png'
 import flag from '@/assets/images/logoVN.png'
 import MenuCategory from '@/components/Menu/Category'
@@ -12,12 +12,31 @@ import img2 from '@/assets/images/img2.png'
 function Navbar() {
   const refMb = useRef()
   const refBar = useRef()
+  const refNav = useRef()
   const handleClickBar = () => {
     refMb?.current?.classList.add('active')
   }
   const handleClose = () => {
     refMb?.current?.classList.remove('active')
   }
+
+  useEffect(() => {
+    const scrollFunction = () => {
+      if (window.scrollY > 20) {
+        document.getElementById("header").style.top = "-7rem";
+      } else {
+        document.getElementById("header").style.top = "0";
+      }
+    };
+
+    window.addEventListener("scroll", scrollFunction);
+
+    return () => {
+      window.removeEventListener("scroll", scrollFunction);
+    };
+  }, []);
+
+  
   const listNav = {
     nav1: 'Trang chủ',
     nav2: 'Về Hoa San',
@@ -82,7 +101,7 @@ function Navbar() {
     }
   ]
   return (
-    <div className='nav-container md:h-[6.125rem] h-[4rem]'>
+    <div id='header' ref={refNav} className='nav-container md:h-[6.125rem] h-[4rem]'>
       <nav className='flex md:px-[3.75rem] items-center justify-between '>
         <div className='flex md:pr-[3.75rem] h-full logoMb max-md:border-solid max-md:border-r-[0.03125rem] max-md:border-[#DCE1E9]'>
           <Image

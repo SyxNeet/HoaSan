@@ -8,7 +8,7 @@ import Stepper from './Stepper'
 
 function index() {
   return (
-    <div>
+    <div className='md:pt-[6.125rem] pt-[4rem]'>
       <Banner />
       <Branch />
       <Product />

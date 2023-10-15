@@ -194,3 +194,26 @@
     transform: translateY(0);
   }
 }
+
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  z-index: 100;
+  background:#fff;
+}
+
+.animation {
+  animation: reveal 4s linear;
+}
+
+@keyframes reveal {
+  from {
+    stroke-dashoffset: 1650;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
