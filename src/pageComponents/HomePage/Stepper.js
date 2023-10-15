@@ -8,7 +8,7 @@ function Stepper() {
 
     const data = new Array(6).fill(0)
     return (
-        <div className='md:pr-[9.36rem] md:pt-[8.12rem] bg-[#E5F1FF]'>
+        <section className='md:pr-[9.36rem] md:pb-[8rem] md:pt-[8.12rem] bg-[#E5F1FF]'>
             <div className='flex flex-col md:gap-[0.31rem] md:pl-[9.36rem] '>
                 <span className='text-textSecondary md:text-[0.875rem] leading-[1.5] uppercase tracking-[0.02625rem]'>
                     QUY TRÌNH KINH DOANH
@@ -49,7 +49,7 @@ function Stepper() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

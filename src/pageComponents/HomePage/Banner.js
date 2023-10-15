@@ -11,7 +11,7 @@ function Banner() {
     banner: [
       {
         image: banner1,
-        title: 'Công TY TNHH'
+        title: 'Công TY Trách Nhiệm Hữu Hạn Hoa San'
       },
       {
         image: banner2,

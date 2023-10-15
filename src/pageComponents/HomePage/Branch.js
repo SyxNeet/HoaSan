@@ -1,12 +1,13 @@
 'use client'
 import React from 'react'
-import { Autoplay } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/react'
 import { useRef, useState } from 'react'
 import imgBranch from '@/assets/images/imgBranch.png'
 import Image from 'next/image'
 import Count from '@/components/Common/Count'
-
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import Marquee from "react-fast-marquee";
 function Branch() {
     const scrollRef = useRef()
     const handleClick = (scrollRef) => {
@@ -41,10 +42,14 @@ function Branch() {
         desc1: 'Công ty TNHH Hoa san',
         desc2: '30 năm một hành trình'
       }
+
+      const arrText = new Array(8).fill({title: 'Về Chúng Tôi',
+        desc1: 'Công ty TNHH Hoa san',
+        desc2: '30 năm một hành trình'})
   return (
-    <div className='max-md:px-[0.63rem] relative'>
+    <section className='max-md:px-[0.63rem] relative'>
         
-        <div className='feature_banner relative z-[10] flex flex-col md:gap-[0.75rem] md:px-[2.25rem] md:mx-[9.36rem]'>
+        <div className='feature_banner md:overflow-hidden relative z-[10] flex flex-col md:gap-[0.75rem] md:px-[2.25rem] md:mx-[9.36rem]'>
             <div className='feature_container max-md:flex-col flex md:gap-[5.19rem]'>
             {featureData?.map((data, index) => (
                 <div key={index} className='feature_item flex flex-col md:pt-[1.5rem]'>
@@ -74,26 +79,21 @@ function Branch() {
                     </svg>
                </div>
                 <div>
-                    <Swiper
-                    spaceBetween={30}
-                    centeredSlides={true}
-                    direction='horizontal'
-                    // autoplay={{
-                    //     delay: 500,
-                    //     disableOnInteraction: false
-                    // }}
-                    slidePerView={1}
-                    modules={[Autoplay]}
-                    className='mySwiper'
+                    <Marquee 
+                        speed={50}
+                        delay={0}
+                        loop={0}
                     >
-                    <SwiperSlide className='w-[70vw]'>
-                        <div className='flex gap-[1.37vw]'>
-                        <p>{aboutData?.desc1}</p>
-                        <span>.</span>
-                        <p>{aboutData?.desc2}</p>
-                        </div>
-                    </SwiperSlide>
-                    </Swiper>
+                         {arrText?.map((item, index) => (
+                            <div key={index} className="!w-fit leading-[1.75rem] tracking-[0.1rem] font-[900] uppercase md:text-[2rem]">
+                                <div className='flex gap-[1.37vw] text-[#fff] textSlide font-averta'>
+                                    <p>{aboutData?.desc1}</p>
+                                    <span>.</span>
+                                    <p className='md:mr-[1rem]'>{aboutData?.desc2} </p>
+                                </div>
+                            </div>
+                        ))}
+                    </Marquee>
                 </div>
             </div>
         </div>
@@ -110,7 +110,7 @@ function Branch() {
             <h5 className='text-textPrimary md:text-[0.875rem] text-[0.6875rem] leading-[1.5] uppercase tracking-[0.02625rem]'>Về Thương Hiệu Hoa San</h5>
             <div className='md:grid flex flex-col grid-cols-5 md:items-center md:gap-x-[1rem] md:gap-y-[0] grid-rows-2'>
                 <div className='col-start-1 col-end-3 row-start-1 row-end-2 flex flex-col md:gap-[2.13rem]'>
-                    <div className='flex flex-col text-[#0774B2] text-[1.75rem] md:text-[2.8125rem] font-[800] leading-[3.375rem] tracking-[-0.14063rem]'>
+                    <div className='flex flex-col text-[#0774B2] text-[1.75rem] md:text-[2.8125rem] font-[800] md:leading-[3.375rem] tracking-[-0.14063rem]'>
                         <h2>Khẳng định thương hiệu </h2>   
                         <h2>Trên thị trường Quốc tế</h2>   
                     </div>
@@ -145,7 +145,7 @@ function Branch() {
             </div>
             </div>
         <div ref={scrollRef}></div>
-    </div>
+    </section>
   )
 }
 
