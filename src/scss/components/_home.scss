@@ -209,11 +209,27 @@
   animation: reveal 4s linear;
 }
 
-@keyframes reveal {
-  from {
-    stroke-dashoffset: 1650;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
+.num_absolute{
+    transform: translate(-50%, -50%);
+    width: 130%;
+    height: 130%;
+    background: #fff;
+    border-radius: 50%;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s all linear
 }
+
+// @keyframes reveal {
+//   from {
+//     stroke-dashoffset: 2199;
+//   }
+//   to {
+//     stroke-dashoffset: 0;
+//   }
+// }
+
