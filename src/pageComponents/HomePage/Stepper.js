@@ -18,8 +18,10 @@ function Stepper() {
     const processInfo = document.querySelector('.process_info')
     const lineProcess = [1950, 1650, 1180, 800, 360, 50];
     const processInfoItem = document.querySelectorAll('.process-item')
+    const nums = document.querySelectorAll('.num')
+    const numsTitle = document.querySelectorAll('.title-num')
+    const numsAbsolute = document.querySelectorAll('.num_absolute')
     let current = 0
-    const temp = processLine.getAttribute('stroke-dashoffset')
     gsap.to(processLine,{
     scrollTrigger: {
         trigger: processInfo,
@@ -29,17 +31,109 @@ function Stepper() {
         onUpdate : (self) => {
             if(self.progress - current > 0) {
                 for(let i = 0; i < processInfoItem.length; i++){
-                    if(!(i == processInfoItem.length -1)){
+                    if(!(i == processInfoItem.length - 1)){
                         let transY = 0
-                        if(parseInt(temp)  <= lineProcess[i] && parseInt(temp) > lineProcess[i+1]){
-                            console.log('test');
+                        if(parseInt(processLine.style.strokeDashoffset) <= lineProcess[i] && parseInt(processLine.style.strokeDashoffset) > lineProcess[i+1]){
+                            for(let j = 0; j < i-1; j++){
+                                transY = transY + processInfoItem[j].offsetHeight
+                            }
+                            processInfo.style.transform = `translateY(-${transY}px)`
+                            gsap.to(nums[i],{
+                                width:'4rem',
+                                height:'4rem',
+                                background: "linear-gradient(270.21deg, #0E9ADC 0.16%, #4BC1FA 99.82%)",
+                                color: "#FFFFFF",
+                            })
+                            gsap.to(numsTitle[i],{
+                                color:'#0086C7'
+                            })
+                            gsap.to(numsAbsolute[i],{
+                                opacity:'1',
+                                visibility:'visible'
+                            })
+                        }
+                    }else{
+                        let transY = 0
+                        if(parseInt(processLine.style.strokeDashoffset) <= lineProcess[i]){
+                            for(let j = 0; j < i -1; j++){
+                                if(!(j==i-1)){
+                                    transY = transY + processInfoItem[j].offsetHeight
+                                }else{
+                                    transY = transY + processInfoItem[j+1] - (window.innerHeight-processInfoItem[j].offsetHeight)
+                                }
+                            } 
+                            processInfo.style.transform =`translateY(-${transY}px)`
+                            gsap.to(nums[i],{
+                                width:'4rem',
+                                height:'4rem',
+                                background: "linear-gradient(270.21deg, #0E9ADC 0.16%, #4BC1FA 99.82%)",
+                                color: "#FFFFFF",
+                            })
+                            gsap.to(numsTitle[i],{
+                                color:'#0086C7'
+                            })
+                            gsap.to(numsAbsolute[i],{
+                                opacity:'1',
+                                visibility:'visible'
+                            })
                         }
                     }
                 }
             }
+            else{
+                for(let i = 0; i<processInfoItem.length; i++){
+                    if(!i==0){
+                        let transY = 0
+                        if(parseInt(processLine.style.strokeDashoffset) < lineProcess[i-1] && parseInt(processLine.style.strokeDashoffset)>lineProcess[i]) {
+                            for(let j =0; j < i - 2; j++){
+                                transY = transY + processInfoItem[j].offsetHeight
+                            }
+                            processInfo.style.transform = `translateY(-${transY})`
+                            gsap.to(nums[i],{
+                                width:'4.5rem',
+                                height:'4.5rem',
+                                background: "#FFFFFF",
+                                color: "#00699B",
+                            })
+                            gsap.to(numsTitle[i],{
+                                color: "#213D55"
+                            })
+                            gsap.to(numsAbsolute[i],{
+                                opacity:'0',
+                                visibility:'hidden'
+                            })
+                        }
+                    }
+                    else{
+                        let transY = 0; 
+                        if(parseInt(processLine.style.strokeDashoffset)>lineProcess[i]){
+                        for(let j=0; j<=i-2; j++){
+                            transY = transY + processInfoItem[j].offsetHeight;
+                        }
+                        processInfo.style.transform = `translateY(-${transY}px)`;
+                        gsap.to(nums[i], {
+                            width: "4.5vw",
+                            height: "4.5vw",
+                            background: "#FFFFFF",
+                            color: "#00699B",
+                        });
+                        gsap.to(numsAbsolute[i], {
+                            opacity:'0',
+                            visibility:'hidden'
+                        });
+                        gsap.to(numsTitle[i], {
+                            color: "#213D55",
+                        });
+                        }
+                    }
+                }
+            }
+            current=self.progress;
         }
-    }  
-});
+    },
+    strokeDashoffset:'0',  
+},
+)
     },[])
 
     return (
@@ -55,13 +149,13 @@ function Stepper() {
                 <div className='w-[50%]'>
                     <div className='sticky top-[12rem]'>
                         <div className='w-[90%] relative md:mt-[6.24rem]'>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="784" height="446" viewBox="0 0 784 446" fill="none">
-                            {/* <defs>
+                        <svg xmlns="http://www.w3.org/2000/svg" className='md:w-[49rem] md:h-[27.875rem]' width="784" height="446" viewBox="0 0 784 446" fill="none">
+                            <defs>
                             <linearGradient id="MyGradient">
                                 <stop offset="0.16%" stop-color="#0E9ADC"></stop>
                                 <stop offset="99.82%" stop-color="#4BC1FA"></stop>
                             </linearGradient>
-                            </defs> */}
+                            </defs>
                             <g class="path line">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="784" height="446" viewBox="0 0 784 446" fill="none">
                                     <path d="M0 1L782.452 1V209.5L230.5 209.5V445H650.5" stroke="#D2D9E7" stroke-width="1.67375"></path>
@@ -80,7 +174,7 @@ function Stepper() {
                 </div>
 
                 <div className='w-[50%]'>
-                    <div className='sticky top-0 pt-[10rem] process_info'>
+                    <div className='sticky top-0 md:pt-[20rem] process_info'>
                     {data?.map((item,index)=> (
                         <ProcessInfo 
                             key={index} 

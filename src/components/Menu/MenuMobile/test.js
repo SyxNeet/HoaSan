@@ -14,26 +14,6 @@ gsap.to(processLine,{
                 transY = transY + processInfoItem[j].offsetHeight;
               }
               processInfoReality.style.transform = `translateY(-${transY}px)`;
-              gsap.to(pathNum[i],{
-                width: "4vw",
-                height: "4vw",
-                background: "linear-gradient(270.21deg, #0E9ADC 0.16%, #4BC1FA 99.82%)",
-                color: "#FFFFFF",
-              });
-              gsap.to(processInfoItem[i], {
-                opacity: 1,
-              });
-              gsap.to(pathNumAb[i], {
-                  width: "130%",
-                  height: "130%",
-                  animationName: "processWave",
-                  animationDuration: "1s",
-                  animationTimingFunction: "linear",
-                  animationIterationCount: "infinite",
-              });
-              gsap.to(pathTitle[i], {
-                color: "#0086C7",
-              });
               for(let k=0; k<i; k++){
                 gsap.to(pathNum[k],{
                   width: "4vw",
