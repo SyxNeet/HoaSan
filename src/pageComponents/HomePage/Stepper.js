@@ -1,12 +1,41 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useRef } from 'react'
 import StepperItem from './StepperItem'
 import ProcessInfo from './ProcessInfo'
 import icon from '@/assets/images/iconInfo.svg'
 import img from '@/assets/images/imgInfo.png'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import gsap from 'gsap';
 
 function Stepper() {
 
     const data = new Array(6).fill(0)
+    const svgRef = useRef(null);
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.defaults({ease:'none'})
+    
+    const processLine = document.querySelector('.animation')
+    // useEffect(() => {
+    //     const line = gsap.timeline({
+    //       scrollTrigger: {
+    //         trigger: ".linepath",
+    //         pin:true,
+    //         start: "top top",
+    //         end: "bottom center",
+    //         scrub: 1,
+    //         snap:{
+    //             snapTo:"labels",
+    //             duration:{min:0.2,max:3},
+    //             delay:0.2,
+    //         }
+    //       }
+    //     });
+    //     line.addLabel("start")
+    //         .from('.linepath ',{stroke:'#000'})
+    //         .addLabel("color")
+    //         .to(".linepath", { rotation: 360 })
+    //         .addLabel("end");
+    //   }, []);
     return (
         <section className='md:pr-[9.36rem] md:pb-[8rem] md:pt-[8.12rem] bg-[#E5F1FF]'>
             <div className='flex flex-col md:gap-[0.31rem] md:pl-[9.36rem] '>
@@ -20,11 +49,20 @@ function Stepper() {
                 <div className='w-[50%]'>
                     <div className='sticky top-[12rem]'>
                         <div className='w-[90%] relative md:mt-[6.24rem]'>
-                            <svg xmlns="http://www.w3.org/2000/svg" className='w-full h-full' width="784" height="446" viewBox="0 0 784 446" fill="none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="784" height="446" viewBox="0 0 784 446" fill="none">
+                            {/* <defs>
+                            <linearGradient id="MyGradient">
+                                <stop offset="0.16%" stop-color="#0E9ADC"></stop>
+                                <stop offset="99.82%" stop-color="#4BC1FA"></stop>
+                            </linearGradient>
+                            </defs> */}
+                            <g class="path line">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="784" height="446" viewBox="0 0 784 446" fill="none">
                                     <path d="M0 1L782.452 1V209.5L230.5 209.5V445H650.5" stroke="#D2D9E7" stroke-width="1.67375"></path>
-                                    {/* <path class="animation" d="M0 1L782.452 1V209.5L230.5 209.5V445H650.5" stroke="#0086C7" stroke-width="1.67375"></path> */}
-                                    {/*  style="stroke-dasharray: 2199; stroke-dashoffset: 1952.71;" */}
-                            </svg>
+                                    <path ref={svgRef} class="animation" d="M0 1L782.452 1V209.5L230.5 209.5V445H650.5" stroke="#0086C7" stroke-width="1.67375" stroke-dasharray="2199" stroke-dashoffset="2199"></path>
+                                </svg>
+                            </g>
+                        </svg>
                             <StepperItem num={'1'} className={'top-0 translate-y-[-2rem] left-[20%]'} title={'Nhận thông tin đặt hàng sản phẩm'} />
                             <StepperItem num={'2'} className={'top-0 translate-y-[-2rem] right-[0]'} title={'Đề xuất kế hoạch sản xuất'} />
                             <StepperItem num={'3'} className={'top-[48%] translate-y-[-2.1875vw] right-[0]'} title={'Sản xuất sản phẩm'} />

@@ -8,9 +8,12 @@ function MenuMonile({ handleCloseMenuMb,listNav,dataCate }) {
   const navRef = useRef()
   const [active,setActive] = useState(null)
   const handleOpen = (num) => {
-    setActive(num)
+    if(active === num) {
+      setActive(null)
+    }else{
+      setActive(num)
+    }
   }
-  console.log(active);
   return (
     <nav className='md:hidden bg-[#006198] relative'>
       <Image src={bg} fill quality={100} className='z-[-1]' />
