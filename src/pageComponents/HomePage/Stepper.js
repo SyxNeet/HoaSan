@@ -11,31 +11,37 @@ function Stepper() {
 
     const data = new Array(6).fill(0)
     const svgRef = useRef(null);
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.defaults({ease:'none'})
     
+    useEffect(()=> {
+    gsap.registerPlugin(ScrollTrigger);
     const processLine = document.querySelector('.animation')
-    // useEffect(() => {
-    //     const line = gsap.timeline({
-    //       scrollTrigger: {
-    //         trigger: ".linepath",
-    //         pin:true,
-    //         start: "top top",
-    //         end: "bottom center",
-    //         scrub: 1,
-    //         snap:{
-    //             snapTo:"labels",
-    //             duration:{min:0.2,max:3},
-    //             delay:0.2,
-    //         }
-    //       }
-    //     });
-    //     line.addLabel("start")
-    //         .from('.linepath ',{stroke:'#000'})
-    //         .addLabel("color")
-    //         .to(".linepath", { rotation: 360 })
-    //         .addLabel("end");
-    //   }, []);
+    const processInfo = document.querySelector('.process_info')
+    const lineProcess = [1950, 1650, 1180, 800, 360, 50];
+    const processInfoItem = document.querySelectorAll('.process-item')
+    let current = 0
+    const temp = processLine.getAttribute('stroke-dashoffset')
+    gsap.to(processLine,{
+    scrollTrigger: {
+        trigger: processInfo,
+        scrub:true,
+        start: "top top",
+        end: "bottom bottom-=200",
+        onUpdate : (self) => {
+            if(self.progress - current > 0) {
+                for(let i = 0; i < processInfoItem.length; i++){
+                    if(!(i == processInfoItem.length -1)){
+                        let transY = 0
+                        if(parseInt(temp)  <= lineProcess[i] && parseInt(temp) > lineProcess[i+1]){
+                            console.log('test');
+                        }
+                    }
+                }
+            }
+        }
+    }  
+});
+    },[])
+
     return (
         <section className='md:pr-[9.36rem] md:pb-[8rem] md:pt-[8.12rem] bg-[#E5F1FF]'>
             <div className='flex flex-col md:gap-[0.31rem] md:pl-[9.36rem] '>
@@ -74,7 +80,7 @@ function Stepper() {
                 </div>
 
                 <div className='w-[50%]'>
-                    <div className='sticky top-0 pt-[10rem]'>
+                    <div className='sticky top-0 pt-[10rem] process_info'>
                     {data?.map((item,index)=> (
                         <ProcessInfo 
                             key={index} 

@@ -3,7 +3,7 @@ import React from 'react'
 
 function ProcessInfo({icon,title,desc,image}) {
   return (
-    <div className='flex flex-col md:pl-[1rem] md:pt-[2.25rem] md:pr-[3.56rem] md:pb-[3.56rem] border-t-[0.0625rem] border-solid border-opacity-[0.45] border-[#B9BFCB]'>
+    <div className='process-item flex flex-col md:pl-[1rem] md:pt-[2.25rem] md:pr-[3.56rem] md:pb-[3.56rem] border-t-[0.0625rem] border-solid border-opacity-[0.45] border-[#B9BFCB]'>
         <div className='md:mb-[1.5rem]'>
             <Image src={icon} alt="icon" className='md:w-[4.5rem] md:h-[4.5rem]' quality={100} />
         </div>
