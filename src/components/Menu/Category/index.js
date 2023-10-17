@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 
 import Image from 'next/image'
-function index({dataCate}) {
+function Index({dataCate}) {
   const [active, setActive] = useState(1)
   const handleClick = (index) => {
     setActive(index)
@@ -52,4 +52,4 @@ function index({dataCate}) {
   )
 }
 
-export default index
+export default Index
