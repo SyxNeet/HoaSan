@@ -111,8 +111,8 @@ function Navbar() {
             className='object-contain  w-[4.25rem] h-[3rem] md:w-[7.75rem] md:h-[5.4375rem]'
           />
         </div>
-        <div className='items-center max-md:hidden flex gap-[5.94vw] h-full md:border-r-[0.0625rem] border-solid md:border-l-[0.0625rem] border-[#DCE1E9]'>
-          <div className='flex md:gap-[3vw] h-full md:pl-[3.25rem] items-center'>
+        <div className='items-center max-md:hidden flex gap-[5.94rem] h-full md:border-r-[0.0625rem] border-solid md:border-l-[0.0625rem] border-[#DCE1E9]'>
+          <div className='flex md:gap-[3rem] h-full md:pl-[3.25rem] items-center'>
             <div className='text-textPrimary flex items-center cursor-pointer h-full font-mark md:text-[0.875rem] leading-[1.5] tracking-[0.02625rem] '>
               <span className='whitespace-nowrap uppercase'>{listNav?.nav1}</span>
             </div>
@@ -133,7 +133,7 @@ function Navbar() {
             </div>
           </div>
           <div className='md:pr-[2.12rem]'>
-            <button className='md:rounded-[0.5rem]  bg-bgButton shadow bg-blue-200 md:w-[10.3rem] md:h-[3.06rem] flex flex-shrink-0 gap-[0.56vw] justify-center items-center'>
+            <button className='md:rounded-[0.5rem]  bg-bgButton shadow bg-blue-200 md:w-[10.3rem] md:h-[3.06rem] flex flex-shrink-0 gap-[0.56rem] justify-center items-center'>
               <span className='text-[#fff]'>Liên Hệ Ngay</span>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -149,7 +149,7 @@ function Navbar() {
             </button>
           </div>
         </div>
-        <div className='flex md:gap-[2vw] h-full justify-center items-center md:pl-[1.87rem]'>
+        <div className='flex md:gap-[2rem] h-full justify-center items-center md:pl-[1.87rem]'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             className='md:w-[1.5rem] md:h-[1.5rem] max-md:hidden'

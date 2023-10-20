@@ -112,8 +112,8 @@ function Stepper() {
                         }
                         processInfo.style.transform = `translateY(-${transY}px)`;
                         gsap.to(nums[i], {
-                            width: "4.5vw",
-                            height: "4.5vw",
+                            width: "4.5rem",
+                            height: "4.5rem",
                             background: "#FFFFFF",
                             color: "#00699B",
                         });
@@ -137,8 +137,8 @@ function Stepper() {
     },[])
 
     return (
-        <section className='md:pr-[9.36rem] md:pb-[8rem] md:pt-[8.12rem] bg-[#E5F1FF]'>
-            <div className='flex flex-col md:gap-[0.31rem] md:pl-[9.36rem] '>
+        <section className='md:pr-[12.36rem] md:pb-[8rem] md:pt-[8.12rem] bg-[#E5F1FF]'>
+            <div className='flex flex-col md:gap-[0.31rem] md:pl-[12.36rem] '>
                 <span className='text-textSecondary md:text-[0.875rem] leading-[1.5] uppercase tracking-[0.02625rem]'>
                     QUY TRÌNH KINH DOANH
                 </span>
@@ -165,10 +165,10 @@ function Stepper() {
                         </svg>
                             <StepperItem num={'1'} className={'top-0 translate-y-[-2rem] left-[20%]'} title={'Nhận thông tin đặt hàng sản phẩm'} />
                             <StepperItem num={'2'} className={'top-0 translate-y-[-2rem] right-[0]'} title={'Đề xuất kế hoạch sản xuất'} />
-                            <StepperItem num={'3'} className={'top-[48%] translate-y-[-2.1875vw] right-[0]'} title={'Sản xuất sản phẩm'} />
-                            <StepperItem num={'4'} className={'top-[48%] translate-y-[-2.1875vw] left-[32%]'} title={'Kiểm tra & Đóng gói'} />
-                            <StepperItem num={'5'} className={'top-[100%] translate-y-[-2.1875vw] left-[32%]'} title={'Kiểm tra & Đóng gói'} />
-                            <StepperItem num={'6'} className={'top-[100%] translate-y-[-2.1875vw] right-[0]'} title={'Sản xuất sản phẩm'} />
+                            <StepperItem num={'3'} className={'top-[48%] translate-y-[-2.1875rem] right-[0]'} title={'Sản xuất sản phẩm'} />
+                            <StepperItem num={'4'} className={'top-[48%] translate-y-[-2.1875rem] left-[32%]'} title={'Kiểm tra & Đóng gói'} />
+                            <StepperItem num={'5'} className={'top-[100%] translate-y-[-2.1875rem] left-[32%]'} title={'Kiểm tra & Đóng gói'} />
+                            <StepperItem num={'6'} className={'top-[100%] translate-y-[-2.1875rem] right-[0]'} title={'Sản xuất sản phẩm'} />
                         </div>
                     </div>
                 </div>

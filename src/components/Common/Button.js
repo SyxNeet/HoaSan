@@ -17,7 +17,7 @@ function Button({text,className,hidden,classBg}) {
   };
 }, []);
     return (
-            <div className={`md:rounded-[0.5rem] md:bg-bgButton shadow md:bg-blue-200 ${classBg ? '!bg-bgButton' : '!bg-[#fff]'} bg-[#fff] md:px-[1rem] max-md:px-[0.88rem] max-md:py-[0.88rem] rounded-[0.25rem] w-fit md:h-[3.06rem] flex flex-shrink-0 gap-[0.56vw] justify-center items-center ${hidden ? 'hidden' : ''}`}>
+            <div className={`md:rounded-[0.5rem] md:bg-bgButton shadow md:bg-blue-200 ${classBg ? '!bg-bgButton' : '!bg-[#fff]'} bg-[#fff] md:px-[1rem] max-md:px-[0.88rem] max-md:py-[0.88rem] rounded-[0.25rem] w-fit md:h-[3.06rem] flex flex-shrink-0 gap-[0.56rem] justify-center items-center ${hidden ? 'hidden' : ''}`}>
               <span className={className}>{text}</span>
               <svg
                 xmlns='http://www.w3.org/2000/svg'

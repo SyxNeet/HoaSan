@@ -61,16 +61,16 @@ function Product() {
         ]
     }
     return (
-        <section className='md:pt-[7.17rem] md:pb-[9.7rem] flex flex-col relative md:mt-[6.56rem]'>
+        <section className='md:pt-[7.17rem] md:pb-[9.7rem] flex flex-col relative md:mt-[3.56rem]'>
             <Image src={bg} alt='bg' fill quality={100} className='object-cover z-[-1]' />
-            <h5 className='font-mark md:pl-[9.36rem] pl-[0.62rem] text-[#fff] md:text-[0.875rem] text-[0.6875rem] max-md:mt-[4rem] uppercase tracking-[0.02625rem] mb-[0.5rem] md:mb-[0.56rem]'>
+            <h5 className='font-mark md:pl-[12.36rem] pl-[0.62rem] text-[#fff] md:text-[0.875rem] text-[0.6875rem] max-md:mt-[4rem] uppercase tracking-[0.02625rem] mb-[0.5rem] md:mb-[0.56rem]'>
                 {dataProDuct?.subTitle}
             </h5>
-            <div className='flex md:pl-[9.36rem] pl-[0.62rem] max-md:pr-[4.5rem] justify-between items-center md:pr-[9.36rem] mb-[2.5rem] md:mb-[4.4rem]'>
+            <div className='flex md:pl-[12.36rem] pl-[0.62rem] max-md:pr-[4.5rem] justify-between items-center md:pr-[12.36rem] mb-[2.5rem] md:mb-[4.4rem]'>
                 <h2 className='font-averta md:w-[32.75rem] md:text-[3rem] text-[1.75rem] font-extrabold leading-[1.2] md:leading-[3.5rem] text-[#fff] tracking-[-0.15rem]'>
                     {dataProDuct?.title}
                 </h2>
-                <button className='md:rounded-[0.5rem] max-md:hidden rounded-[0.25rem] bg-[#fff] py-[0.875rem] px-[1.125rem] shadow-md bg-blue-200  md:h-[3.06rem] flex flex-shrink-0 gap-[0.56vw] justify-center items-center'>
+                <button className='md:rounded-[0.5rem] max-md:hidden rounded-[0.25rem] bg-[#fff] py-[0.875rem] px-[1.125rem] shadow-md bg-blue-200  md:h-[3.06rem] flex flex-shrink-0 gap-[0.56rem] justify-center items-center'>
                     <span className='text-textButtonColor whitespace-nowrap md:text-[0.875rem] text-[0.75rem] font-[700] leading-[1.75] uppercase font-averta'>{dataProDuct?.buttonText}</span>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
@@ -101,7 +101,7 @@ function Product() {
                 >
                     {dataProDuct?.listProduct?.map((item,index)=> (
                         <SwiperSlide key={index}>
-                            <div className='flex flex-col relative bg-[#fff] item-swiper'>
+                            <div className='flex flex-col relative bg-[#fff] item-swiper overflow-hidden'>
                                 <Image src={item?.image} alt='image' className='object-cover md:h-[17.36188rem] h-[13.875rem]' quality={100} />
                                 <div className='flex flex-col relative z-[1] md:py-[1.49rem] md:px-[1.33rem] px-[0.87rem] max-md:pt-[0.88rem] max-md:pb-[2.69rem]'>
                                     <h5 className='font-mark md:text-[0.875rem] text-[0.6875rem] leading-[1.5] md:mb-[0.39rem] uppercase tracking-[0.02625rem] text-customColor'>
@@ -113,7 +113,7 @@ function Product() {
                                     </h3>
                                     <p className='text-textPrimary font-averta md:text-[1rem] text-[0.6875rem] max-md:text-ellipsis md:line-clamp-3 max-md:line-clamp-2 leading-[1.5rem]'>{item?.infomation}</p>
                                 </div>
-                                <svg xmlns="http://www.w3.org/2000/svg" className=' z-[1] md:w-[4.52706rem] md:h-[3.46794rem] w-[3.125rem] h-[2.43756rem] absolute right-0 bottom-0' viewBox="0 0 74 56" fill="none">
+                                <svg xmlns="http://www.w3.org/2000/svg" className=' z-[1] md:w-[4.52706rem]  md:h-[3.46794rem] w-[3.125rem] h-[2.43756rem] absolute right-[-1px] bottom-[-1px]' viewBox="0 0 74 56" fill="none">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M73.138 0.768539V55.5892H0.705078C4.73757 24.2873 31.4881 0.101807 63.8874 0.101807C67.0293 0.101807 70.118 0.329239 73.138 0.768539Z" fill="url(#paint0_linear_1160_3810)"/>
                                     <path d="M50.9803 33.0082L39.4158 24.0609V30.7714L34.79 33.0082L39.4158 35.245V41.9554L50.9803 33.0082Z" fill="white"/>
                                     <defs>
@@ -128,7 +128,7 @@ function Product() {
                     ))}
                 </Swiper>
             </div>
-            <button className='md:rounded-[0.5rem] md:hidden max-md:mt-[2.5rem] max-md:ml-[0.62rem] w-fit rounded-[0.25rem] bg-[#fff] py-[0.875rem] px-[1.125rem] shadow-md bg-blue-200  md:h-[3.06rem] flex flex-shrink-0 gap-[0.56vw] justify-center items-center'>
+            <button className='md:rounded-[0.5rem] md:hidden max-md:mt-[2.5rem] max-md:ml-[0.62rem] w-fit rounded-[0.25rem] bg-[#fff] py-[0.875rem] px-[1.125rem] shadow-md bg-blue-200  md:h-[3.06rem] flex flex-shrink-0 gap-[0.56rem] justify-center items-center'>
                     <span className='text-textButtonColor whitespace-nowrap md:text-[0.875rem] text-[0.75rem] font-[700] leading-[1.75] uppercase font-averta'>{dataProDuct?.buttonText}</span>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'

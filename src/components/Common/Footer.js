@@ -69,10 +69,10 @@ function Footer() {
       }
       
   }
-  return <section className='flex flex-col bg-gradient-to-r from-blue-500 to-blue-700 footer'>
-    <div className='flex justify-between'>
+  return <section className='flex flex-col bg-gradient-to-r from-blue-500 to-blue-700 footer h-[100vh]'>
+    <div className='flex justify-between md:h-[24.5625rem]'>
       {/* content left */}
-      <div className='md:flex hidden flex-col w-[50%] md:pt-[3.5rem] pt-[3rem] md:px-[9.36rem]  px-[0.62rem] border-b-[0.1rem] border-solid border-[#FFFFFF1A] '>
+      <div className='md:flex hidden flex-col w-[50%] md:pt-[3.5rem] pt-[3rem] md:px-[12.36rem]  px-[0.62rem] border-b-[0.1rem] border-solid border-[#FFFFFF1A] '>
         <h3 className='text-[#fff] font-averta md:text-[2.5rem] font-[800] leading-[1.3] tracking-[-0.125rem] md:mb-[1rem]'>Liên hệ tư vấn</h3>
         <h4 className='text-[#fff] font-averta md:text-[1.125rem] leading-[1.625rem] tracking-[-0.05625rem] md:mb-[2.94rem]'>Kết nối với chúng tôi nhận tư vấn miễn phí</h4>
         <div className='flex gap-[1.19rem] md:mb-[1.75rem]'>
@@ -88,7 +88,7 @@ function Footer() {
       </div>
 
       {/* content right */}
-      <div className='flex md:gap-[3.94rem] gap-[1.75rem] md:pl-[3.75rem] justify-between bg-[#0086C7] md:pt-[3.5rem] pt-[3rem] md:px-[9.36rem] px-[0.62rem] max-md:pb-[3.5rem]'>
+      <div className='flex md:gap-[3.94rem] gap-[1.75rem] md:pl-[3.75rem] justify-between bg-[#0086C7] md:pt-[3.5rem] pt-[3rem] md:pb-[2.7rem] md:px-[12.36rem] px-[0.62rem] max-md:pb-[3.5rem]'>
         <div className='flex flex-col md:gap-[2.25rem]'>
           <h3 className='text-[#fff] font-averta md:text-[2.5rem] text-[1.75rem] font-extrabold tracking-[-0.125rem] md:w-[18rem] max-md:mb-[0.5rem] '>Giải thưởng Chứng nhận</h3>
           <h4 className='text-[#fff] font-averta md:text-[1.125rem] text-[0.9375rem] leading-[1.625rem] md:tracking-[-0.05625rem] max-md:mb-[1.88rem]'>Hoa San một hành trình 30 năm nỗ lực và phát triển không ngừng.</h4>
@@ -103,7 +103,7 @@ function Footer() {
       </div>
     </div>
 
-    <div className='flex md:gap-[6.5rem] gap-[2.5rem] md:px-[9.36rem] px-[0.62rem] md:py-[4rem] justify-between max-md:pt-[3rem] max-md:flex-col'>
+    <div className='flex md:gap-[6.5rem] gap-[2.5rem] md:h-[calc(100vh-24.5625rem)] md:px-[12.36rem] px-[0.62rem] md:py-[4rem] justify-between max-md:pt-[3rem] max-md:flex-col'>
 
       {/* col1 */}
       <div className='flex flex-col md:gap-[2.5rem] gap-[1.12rem] md:w-[18.5rem]'>
@@ -112,7 +112,7 @@ function Footer() {
         <span className='font-blod'>HOA SAN</span> đơn vị chuyên sản xuất giày, dép, mũ, ủng bảo hộ lao động uy tin chất lượng.
         </p>
       </div>
-      <div className='md:hidden flex-col  md:px-[9.36rem] '>
+      <div className='md:hidden flex-col  md:px-[12.36rem] '>
         <h3 className='text-[#fff] font-averta md:text-[2.5rem] text-[1.75rem] font-[800] leading-[1.3] tracking-[-0.125rem] md:mb-[1rem]'>Liên hệ tư vấn</h3>
         <h4 className='text-[#fff] font-averta md:text-[1.125rem] text-[0.875rem] leading-[1.625rem] md:tracking-[-0.05625rem] md:mb-[2.94rem]'>Kết nối với chúng tôi nhận tư vấn miễn phí</h4>
         <div className='flex gap-[1.19rem] md:mb-[1.75rem] max-md:flex-col max-md:mt-[1.5rem]'>
@@ -131,7 +131,7 @@ function Footer() {
       <div className='md:hidden flex flex-col gap-[1.56rem]'>
         {data?.info?.map((item,index)=>(
           <div key={index} onClick={()=>handleSelect(2)}  className={`flex-col relative flex md:gap-[0.75rem] max-md:border-b-[0.1rem] border-solid border-[#fff] border-opacity-50 max-md:pb-[1rem] ${index === 1 || index === 2 ? 'max-md:hidden' : 'flex'}`}>
-            <div className='flex justify-between items-center'>
+            <div className='flex justify-between items-center '>
             <h4 ref={titleRef} className='text-[#fff] text-opacity-[73] font-mark md:text-[0.875rem] leading-[1.5] uppercase tracking-[0.20625rem] '>
               {item?.name}
             </h4>
@@ -265,11 +265,7 @@ function Footer() {
             ))}
       </div>
     </div>
-    <div className='bg-[#217BC8] flex justify-center  items-center md:py-[0.62rem] max-md:mt-[3rem]'>
-      <h4 className='text-center text-[#fff] font-averta md:text-[0.875rem] text-[0.75rem] leading-[150%]'>
-      Copyright © 2023 HOA SAN. Designed by OkHub Viet Nam
-      </h4>
-    </div>
+    
 
   </section>
 }
