@@ -59,8 +59,8 @@ function NewAndEvents() {
     }
     return (
         <section className=' md:py-[8rem]  py-[2.69rem] flex flex-col'>
-            <h3 className='md:px-[9.36rem] px-[0.62rem] font-mark text-[#0086C7] md:text-[#213D55] md:text-[0.875rem] max-md:mb-[2rem] text-[0.6875rem] leading-[1.5] tracking-[0.02625rem] uppercase md:mb-[0.69rem]'>{data?.subTitle}</h3>
-            <div className=' md:px-[9.36rem] px-[0.62rem] flex justify-between items-end md:mb-[4.06rem] mb-[2rem]'>
+            <h3 className='md:px-[12.36rem] px-[0.62rem] font-mark text-[#0086C7] md:text-[#213D55] md:text-[0.875rem] max-md:mb-[2rem] text-[0.6875rem] leading-[1.5] tracking-[0.02625rem] uppercase md:mb-[0.69rem]'>{data?.subTitle}</h3>
+            <div className=' md:px-[12.36rem] px-[0.62rem] flex justify-between items-end md:mb-[4.06rem] mb-[2rem]'>
                 <h2 className='font-averta md:text-[2.625rem] text-[1.75rem] md:text-[#213D55] text-[#0086C7] font-[800] tracking-[-0.13125rem] text-customize'>
                     {data?.title}
                 </h2>

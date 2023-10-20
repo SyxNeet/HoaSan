@@ -16,7 +16,7 @@ function Partner() {
     }
    
     return (
-        <div className='flex relative max-md:flex-col md:px-[9.36rem] px-[0.62rem] md:py-[7rem] py-[2.56rem] partner h-[90vh] overflow-hidden'>
+        <div className='flex relative max-md:flex-col md:px-[12.36rem] px-[0.62rem] md:py-[7rem] py-[2.56rem] partner h-[90vh] overflow-hidden'>
             <div className='absolute inset-0 bg-[#006198] z-0 opacity-[0.93]'></div>
             <Image src={bg} fill alt='banner' quality={100} className='object-cover z-[-1]'/>
             <div className='flex flex-col relative z-10 md:w-[50%]'>

@@ -49,7 +49,7 @@ function Branch() {
   return (
     <section className='max-md:px-[0.63rem] relative'>
         
-        <div className='feature_banner md:overflow-hidden relative z-[10] flex flex-col md:gap-[0.75rem] md:px-[2.25rem] md:mx-[9.36rem]'>
+        <div className='feature_banner md:overflow-hidden relative z-[10] flex flex-col md:gap-[0.75rem] md:px-[2.25rem] md:mx-[12.36rem]'>
             <div className='feature_container max-md:flex-col flex md:gap-[5.19rem]'>
             {featureData?.map((data, index) => (
                 <div key={index} className='feature_item flex flex-col md:pt-[1.5rem]'>
@@ -86,7 +86,7 @@ function Branch() {
                     >
                          {arrText?.map((item, index) => (
                             <div key={index} className="!w-fit leading-[1.75rem] tracking-[0.1rem] font-[900] uppercase md:text-[2rem]">
-                                <div className='flex gap-[1.37vw] text-[#fff] textSlide font-averta'>
+                                <div className='flex gap-[1.37rem] text-[#fff] textSlide font-averta'>
                                     <p>{aboutData?.desc1}</p>
                                     <span>.</span>
                                     <p className='md:mr-[1rem]'>{aboutData?.desc2} </p>
@@ -99,27 +99,27 @@ function Branch() {
         </div>
         <div
             onClick={()=>handleClick(scrollRef)} 
-            className='flex flex-col md:mb-[5rem] mb-[2.63rem] justify-center items-center gap-[0.94rem] relative md:top-[0] top-[-35%] md:px-[9.36rem]'>
+            className='flex flex-col md:mb-[5rem] mb-[2.63rem] justify-center items-center gap-[0.94rem] relative md:top-[0] top-[-35%] md:px-[12.36rem]'>
             <svg xmlns="http://www.w3.org/2000/svg" className='scrollBanner md:w-[1.375rem] md:h-[1.375rem] w-[1.125rem] h-[1.125rem]' viewBox="0 0 24 25" fill="none">
             <path d="M1 1L12 12L23 1" stroke="#159FE0" stroke-width="2"/>
             <path d="M1 12L12 23L23 12" stroke="#159FE0" stroke-width="2"/>
             </svg>
             <span className='text-center text-textPrimary md:text-[0.75rem] text-[0.625rem] leading-[1.125rem] uppercase'>Cuộn Xuống</span>       
         </div>
-        <div className='flex flex-col gap-[0.56rem] md:pl-[9.36rem]'>
+        <div className='flex flex-col gap-[0.56rem] md:pl-[12.36rem]'>
             <h5 className='text-textPrimary md:text-[0.875rem] text-[0.6875rem] leading-[1.5] uppercase tracking-[0.02625rem]'>Về Thương Hiệu Hoa San</h5>
-            <div className='md:grid flex flex-col grid-cols-5 md:items-center md:gap-x-[1rem] md:gap-y-[0] grid-rows-2'>
+            <div className='md:grid flex flex-col grid-cols-5  md:gap-x-[1rem] md:gap-y-[0] grid-rows-2'>
                 <div className='col-start-1 col-end-3 row-start-1 row-end-2 flex flex-col md:gap-[2.13rem]'>
                     <div className='flex flex-col text-[#0774B2] text-[1.75rem] md:text-[2.8125rem] font-[800] md:leading-[3.375rem] tracking-[-0.14063rem]'>
                         <h2>Khẳng định thương hiệu </h2>   
                         <h2>Trên thị trường Quốc tế</h2>   
                     </div>
-                    <p className='text-textPrimary md:text-[1.125rem] xl:w-[32rem] leading-[1.5]'>Lorem ipsum dolor sit amet consectetur. Posuere mauris enim mattis neque ut est vel commodo arcu. Orci euismod quam amet eget commodo amet lectus. </p>
+                    <p className='text-textPrimary md:text-[1.125rem] md:w-[32rem] leading-[1.5]'>Lorem ipsum dolor sit amet consectetur. Posuere mauris  enim mattis neque ut est vel commodo arcu. Orci euismod quam amet eget commodo amet lectus. </p>
                 </div> 
-                <div className='md:w-full md:h-[40.625rem] row-start-1 row-end-3 col-start-3 col-end-5 md:col-start-3 md:col-end-6'>
-                    <Image src={imgBranch} quality={100} className='w-full h-full' />
+                <div className='md:w-full md:h-[39.625rem] row-start-1 row-end-3 col-start-3 col-end-5 md:col-start-3 md:col-end-6'>
+                    <Image src={imgBranch} quality={100} className='w-full h-full object-cover' />
                 </div>      
-                <div className='col-start-1 col-end-3 row-start-2 row-end-3 grid grid-cols-2 grid-rows-2 md:gap-y-[0] md:gap-x-[2rem]'>
+                <div className='col-start-1 relative md:translate-y-[-20%] col-end-3 row-start-2 row-end-3 grid grid-cols-2 grid-rows-2 md:gap-y-[0] md:gap-x-[2rem]'>
                         <Count num={'18'} text={'Tỷ VND'} desc={'Tổng số vốn điều lệ tính đến 2023'} />
                         <Count num={'18'} text={'Triệu'} desc={'Sản lượng sản phẩm được sản xuất mỗi năm'} />
                         <Count num={'30'} text={'Tỉnh Thành'} desc={'Số lượng cơ sở sản xuất & Đại lý phân phối'} />
@@ -127,8 +127,8 @@ function Branch() {
                 </div>
                 
             </div>
-            <div className='md:pr-[2.12rem] max-md:mt-[1.5rem] max-md:mb-[3.75rem]'>
-                <button className='md:rounded-[0.5rem] bg-bgButton py-[0.875rem] px-[1.125rem] shadow bg-blue-200 md:w-[10.3rem] md:h-[3.06rem] flex flex-shrink-0 gap-[0.56vw] justify-center items-center'>
+            <div className='md:pr-[2.12rem] max-md:mt-[1.5rem] max-md:mb-[3.75rem] md:translate-y-[-120%]'>
+                <button className='md:rounded-[0.5rem] bg-bgButton py-[0.875rem] px-[1.125rem] shadow bg-blue-200 md:w-[10.3rem] md:h-[3.06rem] flex flex-shrink-0 gap-[0.56rem] justify-center items-center'>
                     <span className='text-[#fff] md:text-[0.875rem] text-[0.75rem] font-[700] leading-[1.75] uppercase font-averta'>Về Chúng Tôi</span>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
